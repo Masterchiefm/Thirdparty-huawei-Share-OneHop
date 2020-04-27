@@ -7,6 +7,8 @@
 2.安装并唤起你手机里制作一碰传标签的工具
 3.协助华为手机用户擦除标签以及清理手机内部存储的标签记录
 ```
+界面：
+![](https://github.com/Masterchiefm/Thirdparty-huawei-Share-OneHop/raw/master/1.jpg)
 
 因为制作华为一碰传标签很麻烦，所以搞这个脚本。无脑确认即可完成一碰传标签制作。
 # 直接运行
@@ -40,3 +42,18 @@ python one-hop.py
 
 打赏并不是你从我这里购买到什么或者获得什么特权，打赏只是你对我花费的时间的肯定以及你心情预约的一种表达方式。
 ![让我换个好点的贴纸吧](https://moqiqin.cn/wp-content/uploads/2020/04/dashang.png)
+
+# 致谢
+不限制SN长度的“一碰传助手”app由 [webviewisbad](https://github.com/webviewisbad/-apk) 修改提供
+
+
+# 运行截图
+
+主界面
+![主界面](https://github.com/Masterchiefm/Thirdparty-huawei-Share-OneHop/raw/master/1.jpg)
+制作一碰传贴纸
+![](https://github.com/Masterchiefm/Thirdparty-huawei-Share-OneHop/raw/master/2.jpg)
+![](https://github.com/Masterchiefm/Thirdparty-huawei-Share-OneHop/raw/master/3.jpg)
+辅助华为手机擦除一碰传贴纸
+**注意，这里要一直保持手机与电脑的ADB连接**
+![](https://github.com/Masterchiefm/Thirdparty-huawei-Share-OneHop/raw/master/4.jpg)
