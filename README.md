@@ -8,6 +8,8 @@
 3.协助华为手机用户擦除标签以及清理手机内部存储的标签记录
 ```
 主界面：
+![](https://github.com/Masterchiefm/Thirdparty-huawei-Share-OneHop/raw/master/1.jpg)
+运行截图在文最最最末
 
 因为制作华为一碰传标签很麻烦，所以搞这个脚本。无脑确认即可完成一碰传标签制作。
 # 直接运行
