@@ -9,7 +9,8 @@
 ```
 主界面：
 ![](https://github.com/Masterchiefm/Thirdparty-huawei-Share-OneHop/raw/master/1.jpg)
-[运行截图](https://github.com/Masterchiefm/Thirdparty-huawei-Share-OneHop/blob/master/README.md#%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE)
+
+**[点击查看运行截图](https://github.com/Masterchiefm/Thirdparty-huawei-Share-OneHop/blob/master/README.md#%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE)**
 
 因为制作华为一碰传标签很麻烦，所以搞这个脚本。无脑确认即可完成一碰传标签制作。
 # 直接运行
