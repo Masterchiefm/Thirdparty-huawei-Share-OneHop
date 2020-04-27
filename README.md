@@ -16,6 +16,7 @@
 # 直接运行
 
 下载地址: [Release](https://github.com/Masterchiefm/Thirdparty-huawei-Share-OneHop/releases)
+
 如果你要制作一碰传标签，请首先确认你的手机可以通过扫码连接电脑管家。如果扫码连接都做不到就别折腾了
 在 [Release](https://github.com/Masterchiefm/Thirdparty-huawei-Share-OneHop/releases)中下载zip压缩包，解压后双击运行“一碰传标签制作器.exe”即可
 程序用pyinstaller打包，启动很慢。大约15秒左右可以显示界面，按照弹出提示操作即可。
