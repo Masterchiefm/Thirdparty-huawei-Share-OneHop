@@ -37,6 +37,7 @@ pip install image
 pip install qrcode
 ```
 启动
+将one-hop.ipynb转换为python文件，或者直接用jupyter notebook打开。建议使用jupyter notebook
 ```
 python one-hop.py
 ```
