@@ -33,7 +33,9 @@ def get_sn():
     opt = input('你的选择（小写）: ')
     if opt == 'a':
         while len(sn) < 16:
-            sn = sn + 'a'
+            sn = sn + 'A'
+        if len(sn) > 16:
+            sn = sn[:16]
     elif opt == 'b':
         sn = sn
     elif opt == 'c':
@@ -42,6 +44,8 @@ def get_sn():
         print('将在末尾加a补齐16位SN')
         while len(sn) < 16:
             sn = sn + 'A'
+        if len(sn) > 16:
+            sn = sn[:16]
     return sn
 
 
