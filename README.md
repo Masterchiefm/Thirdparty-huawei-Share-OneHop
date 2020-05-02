@@ -1,5 +1,5 @@
 # Thirdparty-huawei-Share-OneHop
-第三方华为一碰传标签制作工具
+辅助制作第三方华为一碰传标签的小工具
 
 功能：
 ```
