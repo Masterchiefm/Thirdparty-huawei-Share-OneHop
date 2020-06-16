@@ -12,7 +12,29 @@ from time import sleep
 
 # In[29]:
 
-
+def checkadb():
+    check = 0
+    while check < 2:
+        check = 0
+        
+        adb = system('adb.exe devices')
+        if adb == 0:
+            check = check + 1
+        else:
+            print('找不到电脑adb.exe，请确保adb.exe以及相关dll文件在同一目录')
+            input('按回车键重试')
+            continue
+        system('adb.exe kill-server')    
+        devices = popen('adb.exe devices').read().splitlines()
+        if devices[1] == '':
+            print('找不到ADB设备，请确认是否启动手机USB调试')
+            print('请在“开发人员选项”中打开“USB调试”以及“仅充电模式下允许ADB调试”，插上数据线，选择仅充电，并在手机的弹出窗口中允许调试')
+            input('按回车键重试')
+            continue
+        else:
+            print("已连接",devices[1])
+            check = check + 1
+    
 def get_sn():
     sn = ''
     a = popen('wmic bios get serialnumber').read()
@@ -101,24 +123,7 @@ def make_qr():
 def disable_apps():
     system('cls')
     #检测是否有adb程序：
-    check = 0
-    while check < 2:
-        check = 0
-        
-        adb = system('adb.exe devices')
-        if adb == 0:
-            check = check + 1
-        else:
-            print('找不到电脑adb.exe，请确保adb.exe以及相关dll文件在同一目录')
-            input('按回车键重试')
-        system('adb.exe kill-server')    
-        devices = popen('adb.exe devices').read().splitlines()
-        if devices[1] == '':
-            print('找不到ADB设备，请确认是否启动手机ADB调试')
-            input('按回车键重试')
-        else:
-            print("已连接",devices[1])
-            check = check + 1
+    checkadb()
             
     
     #
@@ -162,22 +167,7 @@ def disable_apps():
 def enable_apps():
     #检测是否有adb程序：
     check = 0
-    while check < 2:
-        check = 0
-        adb = system('adb.exe devices')
-        if adb == 0:
-            check = check + 1
-        else:
-            print('找不到电脑adb.exe，请确保adb.exe以及相关dll文件在同一目录')
-            input('按回车键重试')
-            
-        devices = popen('adb.exe devices').read().splitlines()
-        if devices[1] == '':
-            print('找不到ADB设备，请确认是否启动手机ADB调试')
-            input('按回车键重试')
-        else:
-            print("已连接",devices[1])
-            check = check + 1
+    checkadb()
             
     en = 'adb shell pm enable '
     app1 = "com.huawei.android.instantshare"
@@ -231,23 +221,7 @@ def touchshare():
 def nfctool():
     if input('安装NFC Tool 以擦除标签？ y/n ') == 'y':
         #检测是否有adb程序：
-        check = 0
-        while check < 2:
-            check = 0
-            adb = system('adb.exe devices')
-            if adb == 0:
-                check = check + 1
-            else:
-                print('找不到电脑adb.exe，请确保adb.exe以及相关dll文件在同一目录')
-                input('按回车键重试')
-                
-            devices = popen('adb.exe devices').read().splitlines()
-            if devices[1] == '':
-                print('找不到ADB设备，请确认是否启动手机ADB调试')
-                input('按回车键重试')
-            else:
-                print("已连接",devices[1])
-                check = check + 1
+        checkadb()
         
         system('adb install nfctool.apk')
     else:
@@ -274,7 +248,7 @@ def main_menu():
     print('\n\t 1.制作标签')
     print('\t 2.擦除标签以及清除手机标签记录')
     print('\t 3.一碰传失效修复')
-    print('\t 4.清除手机标签记录
+    print('\t 4.清除手机标签记录')
     print('####################################### 一碰传标签二维码生成器 ###############################################')
     opt = int(input('\n\t输入选项: '))
     if opt == 1:
@@ -343,15 +317,8 @@ while s != 'y':
     
     print('如果你使用本程序成功了，而且体验良好，可以考虑给我打赏一杯矿泉水吗？\n打赏不意味着你可以向我购买什么或者获得什么特权，而仅仅是用来表达你成功后的喜悦心情')
     print('二维码 https://moqiqin.cn/wp-content/uploads/2020/04/dashang.png')
-    S = input('退出？ y/n ')
+    S = input('退出？ y/n  或者输入aaa，回车打赏')
     if S == 'aaa':
           system('打赏.png')
-          s=S
+          s= 'y'
     s = S
-
-
-# In[ ]:
-
-
-
-
