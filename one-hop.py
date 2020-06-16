@@ -59,7 +59,7 @@ def get_sn():
         sn = input('请输入你的SN：\n').strip()
     else:
         print('将使用自动SN')
-        sn.replace(' ','A')
+        sn = sn.replace(' ','A')
         while len(sn) < 16:
             sn = sn + 'A'
         if len(sn) > 16:
