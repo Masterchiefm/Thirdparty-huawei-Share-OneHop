@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-
+#v1.5.2
 # In[3]:
 
 
@@ -27,21 +27,17 @@ def get_sn():
         print('\t***************** \033[1;32;43m test \033[0m!错误！找不到SN....我也不知道怎么解决\033[0m!*****************')
     
     print('请选择使用的SN:(默认为a选项，请确保你的是最新版。如果不是，那就用真实sn。a选项默认，不用输入直接回车即可)')
-    print('a.使用@汉客儿修改的最新版电脑管家伪装的SN,即加A补齐16位SN。请到微信搜索 汉客儿下最新版。')
-    print('b.使用真实SN')
+    print('a.使用@汉客儿修改的最新版电脑管家自动SN,即加A补齐16位SN。请到微信搜索 汉客儿下最新版。')
+    print('b.使用系统SN')
     print('c.自己输入SN')
     opt = input('你的选择（小写）: ')
-    if opt == 'a':
-        while len(sn) < 16:
-            sn = sn + 'A'
-        if len(sn) > 16:
-            sn = sn[:16]
-    elif opt == 'b':
+    if  opt == 'b':
         sn = sn
     elif opt == 'c':
         sn = input('请输入你的SN：\n').strip()
     else:
-        print('将在末尾加a补齐16位SN')
+        print('将使用自动SN')
+        sn.replace(' ','A')
         while len(sn) < 16:
             sn = sn + 'A'
         if len(sn) > 16:
@@ -94,7 +90,7 @@ def make_qr():
     dir = popen('echo %cd%').read().replace('\n', '').replace('\r', '') + "\\test.png"
     print('一碰传助手来自https://github.com/webviewisbad/-apk ，请大家有空帮大佬点小星星')
     print('运行结束，获得的代码为:\n',code,'\n二维码保存路径： ',dir)
-    print('若SN中含有/ ,你的电脑不支持。没设备我也不知道该怎么搞。若你的SN是“Not Applicable”，也是用不了')
+    print('请务必保证选择的SN与电脑管家上显示的一致，若不一致，重新运行程序，选择自己输入SN，然后输入和电脑管家一致的')
     system('test.png')
     print('####################################### 一碰传标签二维码生成器 ###############################################\n')
 
@@ -108,13 +104,14 @@ def disable_apps():
     check = 0
     while check < 2:
         check = 0
+        
         adb = system('adb.exe devices')
         if adb == 0:
             check = check + 1
         else:
             print('找不到电脑adb.exe，请确保adb.exe以及相关dll文件在同一目录')
             input('按回车键重试')
-            
+        system('adb.exe kill-server')    
         devices = popen('adb.exe devices').read().splitlines()
         if devices[1] == '':
             print('找不到ADB设备，请确认是否启动手机ADB调试')
@@ -277,7 +274,7 @@ def main_menu():
     print('\n\t 1.制作标签')
     print('\t 2.擦除标签以及清除手机标签记录')
     print('\t 3.一碰传失效修复')
-    print('\t 4.清除手机标签记录（没调试。用不了就直接运行2也可以达到一样效果）')
+    print('\t 4.清除手机标签记录
     print('####################################### 一碰传标签二维码生成器 ###############################################')
     opt = int(input('\n\t输入选项: '))
     if opt == 1:
@@ -300,10 +297,10 @@ def main_menu():
         system('adb shell pm enable com.android.nfc')
         enable_apps()
     elif opt == 2:
-        print('\t风险告知: \n\t 1.你的手机将会被我重启2次 \n\t 2.本程序会冻结多个程序  \n\t 3.务必注意，显示让你拔数据线才能拔，别拔太早。\n\t 4.多次冻结会有一定几率导致程序BUG而需要手机恢复出厂(目前没遇到过)')
+        print('\t风险告知: \n\t 1.你的手机将会被我重启2次,好好看提示 \n\t 2.本程序会冻结多个程序  \n\t 3.务必注意，显示让你拔数据线才能拔，别拔太早。\n\t 4.多次冻结会有一定几率导致程序BUG而需要手机恢复出厂(目前没遇到过)')
         input('回车继续...')
         disable_apps()
-        print('不要慌，是我在帮你重启手机')
+        print('不要慌，是我在帮你重启手机，别拔数据线')
         system('adb reboot')
         input('重启完成就按回车，别拔数据线，后面还有设置...')
         disable_apps()
@@ -346,7 +343,11 @@ while s != 'y':
     
     print('如果你使用本程序成功了，而且体验良好，可以考虑给我打赏一杯矿泉水吗？\n打赏不意味着你可以向我购买什么或者获得什么特权，而仅仅是用来表达你成功后的喜悦心情')
     print('二维码 https://moqiqin.cn/wp-content/uploads/2020/04/dashang.png')
-    s = input('退出？ y/n ')
+    S = input('退出？ y/n ')
+    if S == 'aaa':
+          system('打赏.png')
+          s=S
+    s = S
 
 
 # In[ ]:
