@@ -61,7 +61,7 @@ def get_mac():
             mac = a[n]
     start = mac.find(':') + 1
     if mac == '':
-        print('\t*****************\033[1;32;43m test \033[0m!错误！程序太垃圾，请自己在powershell输入ipconfig /all ，然后自己找\033[0m!*****************')
+        print('\t*****************\033[1;32;43m test \033[0m!错误找不到蓝牙模块！程序太垃圾，请自己在powershell输入ipconfig /all ，然后自己找\033[0m!*****************')
     else:
         mac = mac[start:].strip().replace('-','')
     return mac
