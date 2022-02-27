@@ -51,7 +51,7 @@ python one-hop.py
 如果你觉得这个小程序帮到你了，而且你使用本程序成功了，有着良好的体验，可以考虑请我喝一瓶可乐。
 
 打赏并不是你从我这里购买到什么或者获得什么特权，打赏只是你对我花费的时间的肯定以及你心情愉悦的一种表达方式。
-![让我换个好点的贴纸吧](https://moqiqin.cn/wp-content/uploads/2020/04/dashang.png)
+![让我换个好点的贴纸吧](https://cdn.jsdelivr.net/gh/Masterchiefm/pictures/68747470733a2f2f6d6f716971696e2e636e2f77702d636f6e74656e742f75706c6f6164732f323032302f30342f64617368616e672e706e67.png)
 
 # 致谢
 不限制SN长度的“一碰传助手”app由 [webviewisbad](https://github.com/webviewisbad/-apk) 修改提供
@@ -65,5 +65,5 @@ python one-hop.py
 ![](https://github.com/Masterchiefm/Thirdparty-huawei-Share-OneHop/raw/master/2.jpg)
 ![](https://github.com/Masterchiefm/Thirdparty-huawei-Share-OneHop/raw/master/3.jpg)
 辅助华为手机擦除一碰传贴纸
-**注意，这里要一直保持手机与电脑的ADB连接**
+**注意，这里要一直保持手机与电脑的ADB连接** 
 ![](https://github.com/Masterchiefm/Thirdparty-huawei-Share-OneHop/raw/master/4.jpg)
