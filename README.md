@@ -10,6 +10,12 @@
 2.安装并唤起你手机里制作一碰传标签的工具
 3.协助华为手机用户擦除标签以及清理手机内部存储的标签记录
 ```
+
+清除标签的教程视频:
+
+
+[清除华为一碰传标签-哔哩哔哩](https://b23.tv/T4LfNW3)
+
 主界面：
 ![](https://github.com/Masterchiefm/Thirdparty-huawei-Share-OneHop/raw/master/1.jpg)
 
