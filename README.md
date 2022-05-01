@@ -1,7 +1,6 @@
-已完成历史使命，擦除标签的方案已整合入@[汉客儿](https://www.weibo.com/anhkgg) 最新工具。[截图](https://raw.githubusercontent.com/Masterchiefm/Thirdparty-huawei-Share-OneHop/master/Screenshot_20200517_161635_com.coolapk.market.jpg)
 # Thirdparty-huawei-Share-OneHop
 辅助制作第三方华为一碰传标签的小工具
-其实最重要的功能是让你的华为手机**擦除一碰传标签**，让标签可以重新写，省下买新标签的钱
+现在它最重要的功能是让你的华为手机**清除一碰传标签**，让标签可以重新写，省下买新标签的钱
 反馈请到酷安，我的id是 @花不语笑人痴
 
 功能：
